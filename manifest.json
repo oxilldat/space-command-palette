@@ -1,9 +1,9 @@
 {
   "id": "space-command-palette",
   "name": "Space Command Palette",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "minAppVersion": "1.13.0",
-  "description": "A context-aware command palette driven by Obsidian's built-in Workspaces plugin.",
+  "description": "A context-aware command palette driven by the built-in Workspaces plugin.",
   "author": "oxill",
   "authorUrl": "https://t.me/oxilldat",
   "fundingUrl": "https://boosty.to/oxilldat",

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1
+
+- Updated the manifest description for the community plugin directory.
+- Improved CSS compatibility with supported Obsidian versions.
+- Added automated release artifact attestations.
+
 ## 0.1.0
 
 - Added workspace-specific command palettes for Obsidian Workspaces.

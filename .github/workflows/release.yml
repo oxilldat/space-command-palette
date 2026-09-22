@@ -1,0 +1,41 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate and stage release files
+        shell: bash
+        run: |
+          node --check main.js
+          test "$(node -p "require('./manifest.json').version")" = "$GITHUB_REF_NAME"
+          mkdir dist
+          cp main.js manifest.json styles.css dist/
+
+      - name: Attest main.js
+        uses: actions/attest@v4
+        with:
+          subject-path: dist/main.js
+
+      - name: Attest styles.css
+        uses: actions/attest@v4
+        with:
+          subject-path: dist/styles.css
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/* --title "$GITHUB_REF_NAME" --generate-notes --latest
