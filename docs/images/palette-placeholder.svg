@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#181818"/>
+  <rect x="250" y="90" width="700" height="495" rx="24" fill="#222" stroke="#444" stroke-width="2"/>
+  <text x="600" y="315" fill="#ddd" font-family="Arial, sans-serif" font-size="34" text-anchor="middle">Palette screenshot</text>
+  <text x="600" y="365" fill="#888" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">docs/images/palette.png</text>
+</svg>

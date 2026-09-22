@@ -1,0 +1,5 @@
+.obsidian/
+data.json
+node_modules/
+*.zip
+vault-content/
