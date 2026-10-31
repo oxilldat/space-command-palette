@@ -70,10 +70,6 @@ Space Command Palette works locally, contains no telemetry, and makes no network
 
 Renaming or deleting a Workspace from the plugin's context menu also updates the saved Workspace in Obsidian. Settings from Space Command Palette 0.1.x are migrated automatically.
 
-## Compatibility notice
-
-Obsidian does not currently expose a public API for identifying and managing the active saved Workspace. This plugin isolates its use of the internal Workspaces instance, but major Obsidian updates may require a compatibility update.
-
 ## License
 
 MIT © 2026 oxill. See [LICENSE](LICENSE).
