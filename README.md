@@ -2,61 +2,63 @@
 
 [Русский](#русский) · [English](#english)
 
-![Plugin settings](docs/images/settings.png)
-
-![Contextual command palette](docs/images/palette.png)
-
 ## Русский
 
-Контекстная палитра команд для встроенного плагина Obsidian **«Пространства»** (`Workspaces`). Каждая сохранённая компоновка получает собственный набор команд, который включается автоматически при её загрузке.
+**Space Command Palette** — контекстная палитра и круговое меню команд для Obsidian. Плагин связывает сохранённые пространства (`Workspaces`) с отдельными наборами команд: при переключении рабочего контекста меняются и обычная палитра, и radial menu.
 
-Возможности: выбор команд Obsidian и сторонних плагинов, настройка порядка, защита от повторных привязок, сохранение настроек удалённого или переименованного пространства, однострочный импорт/экспорт JSON и интерфейс на русском, английском и китайском языках.
+> Только для настольной версии Obsidian 1.13.0+.
 
-Требования: Obsidian 1.13.0+, включённый встроенный плагин **«Пространства»** и хотя бы одна сохранённая компоновка.
+<!-- СКРИНШОТ 1: круговое меню поверх рабочего пространства -->
 
-Установка: скопируйте `main.js`, `manifest.json` и `styles.css` в `<vault>/.obsidian/plugins/space-command-palette/`, перезапустите Obsidian и включите плагин.
+### Возможности
 
-Настройка:
+- отдельная палитра команд для каждого сохранённого пространства;
+- полностью настраиваемое круговое меню у курсора;
+- команды и вложенные папки команд в секторах;
+- выбор иконки и акцентного цвета для каждого сектора;
+- единичное или двойное нажатие назначенного хоткея;
+- анимация появления, звуки переключения и выбора;
+- интерактивный предпросмотр в настройках;
+- иконки пространств, переименование и удаление Workspace через контекстное меню;
+- импорт и экспорт конфигурации;
+- русский, английский и китайский интерфейс палитры;
+- локальное хранение без телеметрии и сетевых запросов.
 
-1. Откройте `Настройки → Space Command Palette`.
-2. Нажмите **«Добавить палитру»** и выберите пространство.
-3. Через **«Выбрать команды»** добавьте нужные команды.
-4. Через **«Расположение»** измените порядок или удалите команды.
+<!-- СКРИНШОТ 2: настройки пространства, палитры и кругового меню -->
 
-`Ctrl+Shift+P`, значок в ленте и название в строке состояния открывают палитру активного пространства. Если привязки нет, открывается стандартная палитра Obsidian.
+### Установка и настройка
 
-При удалении или переименовании пространства настроенный набор сохраняется и отмечается как отсутствующий. Его можно перепривязать к другой компоновке. Недоступные команды также сохраняются и помечаются в редакторе расположения.
+Скопируйте `main.js`, `manifest.json` и `styles.css` в `<vault>/.obsidian/plugins/space-command-palette/`, перезапустите Obsidian и включите плагин.
 
-Экспорт копирует конфигурацию одной строкой JSON. Импорт переносит язык, привязки, ID команд и их порядок. Данные хранятся в `.obsidian/plugins/space-command-palette/data.json`; заметки и компоновки плагин не изменяет.
+1. Включите встроенный плагин Obsidian **«Пространства»** и сохраните хотя бы одну компоновку.
+2. Откройте `Настройки → Space Command Palette`.
+3. Выберите глобальное меню или конкретное пространство.
+4. Настройте команды палитры и сектора кругового меню.
+5. Назначьте хоткеи командам **Open contextual command palette** и **Open radial menu** в настройках Obsidian.
 
-> Obsidian не предоставляет публичный API активной сохранённой компоновки. Плагин использует внутренний экземпляр `workspaces`, поэтому после крупных обновлений Obsidian может потребоваться обновление совместимости.
+Если для активного пространства нет отдельной конфигурации, круговое меню использует глобальный набор, а обычная палитра открывает стандартную палитру Obsidian.
+
+Данные плагина хранятся в `.obsidian/plugins/space-command-palette/data.json`; заметки не изменяются. Переименование и удаление Workspace через контекстное меню синхронно изменяет сохранённые пространства встроенного плагина Obsidian. Настройки версий 0.1.x мигрируют автоматически.
+
+> Obsidian не предоставляет публичный API активного сохранённого пространства. Для определения контекста используется внутренний экземпляр `workspaces`, поэтому после крупных обновлений Obsidian может потребоваться обновление совместимости.
 
 ---
 
 ## English
 
-A contextual command palette for Obsidian's built-in **Workspaces** plugin. Each saved layout gets its own command set, activated automatically when that workspace is loaded.
+**Space Command Palette** is a contextual command palette and radial command menu for Obsidian. It assigns independent command sets to saved Workspaces, so both the palette and the pie menu follow your current working context.
 
-Features include selection of Obsidian and third-party commands, custom ordering, duplicate-binding prevention, preserved settings for renamed or deleted workspaces, single-line JSON import/export, and Russian, English, and Chinese interfaces.
+> Desktop-only. Requires Obsidian 1.13.0 or newer.
 
-Requirements: Obsidian 1.13.0+, the built-in **Workspaces** plugin enabled, and at least one saved workspace.
+<!-- SCREENSHOT 1: radial menu over an active workspace -->
 
-Installation: copy `main.js`, `manifest.json`, and `styles.css` into `<vault>/.obsidian/plugins/space-command-palette/`, restart Obsidian, and enable the plugin.
+Features include per-workspace command palettes, a cursor-centered radial menu, nested command folders, configurable icons and colors, Workspace rename/delete actions, single or double hotkey activation, animation and optional sounds, an interactive settings preview, configuration import/export, and local-only storage without telemetry.
 
-Setup:
+<!-- SCREENSHOT 2: workspace, palette, and radial-menu settings -->
 
-1. Open `Settings → Space Command Palette`.
-2. Select **Add palette** and choose a workspace.
-3. Use **Choose commands** to select its commands.
-4. Use **Order** to reorder or remove commands.
+Install `main.js`, `manifest.json`, and `styles.css` into `<vault>/.obsidian/plugins/space-command-palette/`, restart Obsidian, and enable the plugin. Enable Obsidian's built-in Workspaces plugin, choose a global or saved-workspace configuration in settings, then assign hotkeys to **Open contextual command palette** and **Open radial menu**.
 
-`Ctrl+Shift+P`, the ribbon icon, and the status-bar workspace name open the active contextual palette. If no binding exists, Obsidian's standard command palette opens instead.
-
-If a workspace is renamed or deleted, its command set is retained and marked as missing so it can be reassigned. Unavailable commands are also retained and identified in the Order editor.
-
-Export copies the configuration as single-line JSON. Import restores the language, workspace bindings, command IDs, and order. Data is stored in `.obsidian/plugins/space-command-palette/data.json`; the plugin does not modify notes or saved layouts.
-
-> Obsidian has no public API for the active saved workspace. This plugin reads the internal `workspaces` instance, so major Obsidian updates may require a compatibility update.
+If the active Workspace has no custom radial menu, the global menu is used. If it has no contextual palette, Obsidian's standard command palette opens. Existing 0.1.x settings are migrated automatically.
 
 ## License
 

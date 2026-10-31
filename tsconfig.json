@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ES2022",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["DOM", "ES2022"],
+    "typeRoots": ["../oxill-forms/node_modules/@types"],
+    "paths": {
+      "obsidian": ["../oxill-forms/node_modules/obsidian/obsidian.d.ts"]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}
+

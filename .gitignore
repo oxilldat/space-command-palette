@@ -1,5 +1,6 @@
 .obsidian/
 data.json
 node_modules/
+*.map
 *.zip
 vault-content/

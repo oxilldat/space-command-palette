@@ -1,11 +1,11 @@
 {
   "id": "space-command-palette",
   "name": "Space Command Palette",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "minAppVersion": "1.13.0",
-  "description": "A context-aware command palette driven by the built-in Workspaces plugin.",
+  "description": "Open context-aware command palettes and radial menus for each saved Workspace.",
   "author": "oxill",
   "authorUrl": "https://t.me/oxilldat",
   "fundingUrl": "https://boosty.to/oxilldat",
-  "isDesktopOnly": false
+  "isDesktopOnly": true
 }
